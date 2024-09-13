@@ -19,7 +19,9 @@ The wlan2eth script configures a Raspberry Pi to share its Wi-Fi connection over
 
 To 'inject' wlan2eth in your system, run the following command in your terminal:
 ```bash
-curl -sSL https://douxxu.lain.ch/setups/wlan2eth | sudo bash
+curl -sSL https://douxxu.lain.ch/setups/wlan2eth -o wlan2eth
+chmod +x wlan2eth
+sudo ./wlan2eth
 ```
 
 
@@ -31,7 +33,7 @@ curl -sSL https://douxxu.lain.ch/setups/wlan2eth | sudo bash
    Example to specify a different IP range:
 
    ```bash
-   curl -sSL https://douxxu.lain.ch/setups/wlan2eth | sudo bash -r 192.168.1.50,192.168.1.150
+   sudo ./wlan2eth -r 192.168.1.50,192.168.1.150
    ```
 
 >[!WARNING]
